@@ -1,117 +1,138 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import Navigations from "@/components/navigations";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = DM_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={` ${inter.className}`}
     >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <Navigations />
+
+      <div className="md:flex flex-row justify-between">
+        <div className="">
+          <div className="flex  mt-12 gap-[12px] px-[20px] sm:px-[50px]">
+            <h4 className="font-[700] text-[35px] leading-[47.25px] text-[#3D3D3D]">Senior Product Designer</h4>
+            <div className="w-1 h-1 border-2 rounded-full mt-2 border-[#D1D1D1]"></div>
+            <p className="text-[#888888] font-[500] text-[14px] leading-[18.19px]">posted 2 days ago</p>
+            <div className="flex h-6 bg-[#ECFDF3] border-[#ABEFC6] border-[1px] font-[500] text-[14px] leading-[18.19px] gap-1 px-2 rounded-full">
+              <div className="w-1 h-1 border-2 rounded-full mt-2 border-[#067647]"></div>
+              <p className="text-[#067647]">open</p>
+            </div>
+          </div>
+
+          <div className="flex my-8 px-[20px] sm:px-[50px]">
+            <Image src='/location-icon.png' className="w-6 h-6" width={24} height={24} alt="location Icon" />
+            <h6 className="pl-4 font-[500] text-[16px] sm:text-[20px] leading-[27px] text-[#5D5D5D] ">Delaware, USA</h6>
+            <Image src='/coins-stacked.png' className=" ml-8 w-6 h-6" width={24} height={24} alt="location Icon" />
+            <h6 className="pl-4 font-[500] text-[16px] sm:text-[20px] leading-[27px] text-[#5D5D5D] ">$300k-$400k </h6>
+          </div>
+          <div className="border-y-[1px] border-[#E7E7E7] py-6" >
+            <div className="grid md:grid-cols-4 px-[50px] gap-x-12 space-y-3">
+              <div className="space-y-2">
+                <h6 className="text-[14px] font-[500] leading-[18.9px] text-[#6E6D6D]">Skills Required</h6>
+                <button className="flex border-[1px] cursor-text pr-2 border-[#D0D5DD] gap-1 rounded-sm  place-items-center">
+                  <Image src='/figma.png' width={24} height={24} alt="Figma" />
+                  <h6 className="font-[500] text-[12px] leadind-[16.2] ">Figma</h6>
+                </button>
+                <button className="flex border-[1px] md:px-1 cursor-text border-[#D0D5DD] gap-1 rounded-sm  place-items-center">
+                  <Image src='/adobe-illustrator.png' width={24} height={24} alt="Adobe Illustrator" />
+                  <h6 className="font-[500] text-[12px] leadind-[16.2] ">Adobe Illustrator</h6>
+                </button>
+                <button className="flex border-[1px] cursor-text border-[#D0D5DD] gap-1 rounded-sm  place-items-center px-1">
+                  <Image src='/adobe-xd.png' width={24} height={24} alt="Adobe XD" />
+                  <h6 className="font-[500] text-[12px] leadind-[16.2] ">Adobe XD</h6>
+                </button>
+              </div>
+              <div className="space-y-2">
+                <h6 className="text-[14px] font-[500] leading-[18.9px] text-[#6E6D6D]">Preferred Language</h6>
+                <h6 className="text-[#3D3D3D] font-[600] text-4">English</h6>
+              </div>
+              <div className="space-y-2">
+                <h6 className="text-[14px] font-[500] leading-[18.9px] text-[#6E6D6D]">Type</h6>
+                <h6 className="text-[#3D3D3D] font-[600] text-4">Full time</h6>
+              </div>
+              <div className="space-y-2">
+                <h6 className="text-[14px] font-[500] leading-[18.9px] text-[#6E6D6D]">Years of Experience</h6>
+                <h6 className="text-[#3D3D3D] font-[600] text-4">3+ Years of Experience</h6>
+              </div>
+
+            </div>
+          </div>
+          <div className="px-[50px] py-6">
+            <h6 className="text-[#6E6D6D] font-[500] leading-[18.9px] text-[14px] ">About the job</h6>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">1. Handle the UI/UX research design </p> 
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">2. Work on researching on latest web applications designs & trends</p>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">3. Work on conceptualizing and visualizing</p>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">4. Work on creating graphics content and other graphic related works</p>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">Benefits:</p>
+            <ul className="list-disc ml-6">
+              <li className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px]">Health insurance</li>
+              <li className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px]">Provident Fund</li>
+            </ul>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">Schedule:</p>
+            <ul className="list-disc ml-6">
+              <li className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px]">Day shift</li>
+            </ul>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">Supplemental pay types:</p>
+            <ul className="list-disc ml-6">
+              <li className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px]">Performance bonus</li>
+              <li className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px]">Yearly bonus</li>
+            </ul>
+            <p className="text-[#3D3D3D] font-[500] text-[16px] leading-[28px] ">Work Location: In person</p>
+              
+          </div>
+          
         </div>
-      </div>
+        <div className="border-[#E7E7E7] border-[1px] md:min-h-screen py-7">
+          <div className="flex gap-x-4  px-5">
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div className="border-[#DC4A2D] bg-[#FEF4F2] rounded-[8px] border-[0.8px] flex justify-center gap-x-2 px-3 md:w-[172px] py-3 ">
+              <Image src="/delete-icon.png" width={20} height={20} alt="Delete Icon" />
+              <h5 className="text-[#DC4A2D] ">Delete job</h5>
+            </div>
+            <div className="bg-[#DC4A2D]  rounded-[8px] border-[0.8px] flex justify-center gap-x-2 px-4 py-3 md:w-[172px]">
+              <Image src="/edit-icon.png" width={20} height={20} alt="Delete Icon" />
+              <h5 className="text-[#FFFFFF] ">Edit job</h5>
+            </div>
+          </div>
+          <table className="table-auto w-full">
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <tbody>
+              <tr>
+                <td className="flex mt-8 pl-6">
+                  <Image className="w-5 h-5" src='/applicants-icon.png' width={20} height={20} alt="Applicants Icon" />
+                  <span className="font-[500] text-[16px] leading-[21.6px] text-[#4F4F4F] pl-2">Applicants</span>
+                </td>
+                <td className="font-[600] text-[20px] leading-[27px] text-[#3D3D3D] pt-8 ">400</td>
+              </tr>
+              <tr>
+                <td className="flex mt-8 pl-6">
+                  <Image className="w-5 h-5" src='/maches-icon.png' width={20} height={20} alt="Matches Icon" />
+                  <span className="font-[500] text-[16px] leading-[21.6px] text-[#4F4F4F] pl-2">Matches</span>
+                </td>
+                <td className="font-[600] text-[20px] leading-[27px] text-[#3D3D3D] pt-8 ">100</td>
+              </tr>
+              <tr>
+                <td className="flex mt-8 pl-6">
+                  <Image className="w-5 h-5" src='/messages-icon.png' width={20} height={20} alt="Messages Icon" />
+                  <span className="font-[500] text-[16px] leading-[21.6px] text-[#4F4F4F] pl-2">Messages</span>
+                </td>
+                <td className="font-[600] text-[20px] leading-[27px] text-[#3D3D3D] pt-8 ">147</td>
+              </tr>
+              <tr>
+                <td className="flex mt-8 pl-6">
+                  <Image className="w-5 h-5" src='/eye-icon.png' width={20} height={20} alt="Views Icon" />
+                  <span className="font-[500] text-[16px] leading-[21.6px] text-[#4F4F4F] pl-2">Views</span>
+                </td>
+                <td className="font-[600] text-[20px] leading-[27px] text-[#3D3D3D] pt-8 ">800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
   );
